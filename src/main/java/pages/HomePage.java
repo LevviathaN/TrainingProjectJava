@@ -7,7 +7,8 @@ public class HomePage {
 
     //Class attributes
     private WebDriver driver = DriverProvider.driver;
-    private String learnMoreButton = "//a[@class='button button-big button-wide button-primary p-0 px-xs-5 d-block d-xs-inline-block']";
+    private By learnMoreButton = By.xpath("//a[@class='button button-big button-wide button-primary p-0 px-xs-5 d-block d-xs-inline-block']");
+
 
 
     //Class methods
@@ -18,6 +19,6 @@ public class HomePage {
 
     public void openPDP(){
         System.out.println("Opening mattress PDP");
-        driver.findElement(By.xpath(learnMoreButton)).click();
+        driver.findElement(learnMoreButton).click();
     }
 }

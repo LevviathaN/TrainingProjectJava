@@ -7,19 +7,27 @@ public class ProductPage {
 
     //Class attributes
     private WebDriver driver = DriverProvider.driver;
-    private String addToCartButton = "//button[@id='product-addtocart-button']";
-    private String viewCartButton = "//a[@class='__to-checkout button']";
+    private By addToCartButton = By.xpath("//button[@id='product-addtocart-button']");
+    private By viewCartButton = By.xpath("//a[@class='__to-checkout button']");
+    private By AddToCArtCSItem = By.xpath("//*[@id=\"modal-content-29\"]/div/div/div/div[3]/div[2]/div[3]/form/button");
 
     //Class methods
     public void clickAddToCart(){
         System.out.println("Adding product to cart");
         DriverProvider.waitFor(3);
-        driver.findElement(By.xpath(addToCartButton)).click();
+        driver.findElement(addToCartButton).click();
+    }
+
+
+    public void AddCrossSellITem(){
+        System.out.println("Adding cross sell item to cart");
+        DriverProvider.waitFor(3);
+        driver.findElement(AddToCArtCSItem).click();
     }
 
     public void clickViewVart() {
         System.out.println("Trying to click on View Cart");
         DriverProvider.waitFor(3);
-        driver.findElement(By.xpath(viewCartButton)).click();
+        driver.findElement(viewCartButton).click();
     }
 }
