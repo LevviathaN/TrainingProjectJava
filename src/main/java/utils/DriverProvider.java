@@ -12,7 +12,7 @@ public class DriverProvider {
 
     /* Цей метод створює екземпляр ВебДрайвера, тобто по суті відкриває нове вікно браузера. */
     private static WebDriver driver(){
-        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver_mac");
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         return new ChromeDriver();
     }
 
