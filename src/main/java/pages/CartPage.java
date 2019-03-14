@@ -16,5 +16,7 @@ public class CartPage {
         driver.findElement(By.xpath(ProceedToCheckoutButton)).click();
     }
 
-
+    public boolean isCartPageOpened(){
+        return driver.findElement(By.xpath(ProceedToCheckoutButton)).isDisplayed();
+    }
 }
