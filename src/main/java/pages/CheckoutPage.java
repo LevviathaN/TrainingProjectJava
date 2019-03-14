@@ -2,24 +2,23 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import utils.DriverProvider;
 
 public class CheckoutPage {
 
     //Class attributes - Checkout page selectors.
-    private WebDriver driver = DriverProvider.driver;
-    private By EmailAddressField = By.id("customer-email");
-    private By FirstName = By.name("firstname");
-    private By LastName = By.name("lastname");
-    private By StreetAddress = By.name("street[0]");
-    private By City = By.name("city");
-    private By Phone = By.name("telephone");
-    private By BillingAddressButton = By.className("toogle");
-    private By CardNumber = By.name("credit-card-number");
-    private By ExpirationMonth = By.name("expiration-month");
-    private By ExpirationYear = By.name("expiration-year");
-    private By CVVCode = By.name("cvv");
+    public WebDriver driver = DriverProvider.driver;
+    public By EmailAddressField = By.id("customer-email");
+    public By FirstName = By.name("firstname");
+    public By LastName = By.name("lastname");
+    public By StreetAddress = By.name("street[0]");
+    public By City = By.name("city");
+    public By Phone = By.name("telephone");
+    public By BillingAddressButton = By.className("toogle");
+    public By CardNumber = By.name("credit-card-number");
+    public By ExpirationMonth = By.name("expiration-month");
+    public By ExpirationYear = By.name("expiration-year");
+    public By CVVCode = By.name("cvv");
 
 
 

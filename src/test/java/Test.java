@@ -1,7 +1,7 @@
 import org.openqa.selenium.WebDriver;
 import pages.CheckoutPage;
 import pages.HomePage;
-import pages.ProductPage;
+import pages.HybridMattressPDP;
 import pages.ShoppingCartPage;
 import utils.DriverProvider;
 
@@ -13,39 +13,22 @@ public class Test {
 
         WebDriver driver = DriverProvider.driver;
         HomePage home = new HomePage();
-
-        ProductPage MattressPDP = new ProductPage();
-
+        HybridMattressPDP MattressPDP = new HybridMattressPDP();
         ShoppingCartPage shoppingcart = new ShoppingCartPage();
-
         CheckoutPage checkout = new CheckoutPage();
-
 
 
 
 
         // test steps
         home.openHomePage();
-
         home.openPDP();
-
         MattressPDP.clickAddToCart();
-
-        MattressPDP.AddCrossSellITem();
-
-        MattressPDP.clickViewVart();
-
+        MattressPDP.clickViewCart();
         shoppingcart.clickProceedToCheckout();
-
         checkout.EnterShippingAddress();
-
         checkout.ClosingBillingAddress();
-
-        //checkout.ChoosingPaymentMethod();
-
-
-
-
+        //checkout.ChoosingPaymentMethod(); (Must be refactored during frame switch)
         driver.close();
 
 
