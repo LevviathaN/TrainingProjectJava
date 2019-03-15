@@ -1,4 +1,6 @@
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 import pages.CheckoutPage;
 import pages.HomePage;
 import pages.HybridMattressPDP;
@@ -6,8 +8,9 @@ import pages.ShoppingCartPage;
 import utils.DriverProvider;
 
 
-public class Test {
-    public static void main(String[] args) {
+public class Test1 {
+    @Test
+    public static void firstTest() {
         //todo TASK: using provided classes and their methods, navigate to PDP add product to cart
         // init pages
 
@@ -22,6 +25,7 @@ public class Test {
 
         // test steps
         home.openHomePage();
+        Assert.assertTrue(home.learnMoreButtonAvailable(),"Learn More button not available");
         home.openPDP();
         MattressPDP.clickAddToCart();
         MattressPDP.clickViewCart();

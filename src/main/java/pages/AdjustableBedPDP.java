@@ -44,5 +44,11 @@ public class AdjustableBedPDP {
         driver.findElement(updateCartButton).click();
     }
 
+    public boolean addToCartButtonDisplayed() {
+        System.out.println("checking if button available");
+        DriverProvider.waitFor(3);
+        return driver.findElement(addToCartButton).isDisplayed();
+    }
+
 
 }

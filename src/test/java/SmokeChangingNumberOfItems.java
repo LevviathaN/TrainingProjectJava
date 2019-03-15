@@ -1,4 +1,5 @@
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
 import pages.AdjustableBedPDP;
 import pages.HomePage;
 import pages.ShopPLP;
@@ -7,8 +8,8 @@ import utils.DriverProvider;
 
 public class SmokeChangingNumberOfItems {
 
-
-    public static void main(String[] args) {
+    @Test
+    public static void smokeChangingNumberOfItems() {
 
 
         //Class Attributes

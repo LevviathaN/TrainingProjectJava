@@ -10,6 +10,8 @@ public class PlushPillowPDP {
 
     public WebDriver driver = DriverProvider.driver;
     public By addToCartButton = By.xpath("//button[@id='product-addtocart-button']");
+    public By BasePrice = By.xpath("//*[@id=\"product-price-209\"]/span");
+
 
     //Class methods
 
@@ -17,6 +19,18 @@ public class PlushPillowPDP {
         System.out.println("Adding product to cart");
         DriverProvider.waitFor(3);
         driver.findElement(addToCartButton).click();
+    }
+
+    public boolean addToCartButtonDisplayed() {
+        System.out.println("checking if button available");
+        DriverProvider.waitFor(3);
+        return driver.findElement(addToCartButton).isDisplayed();
+    }
+
+    public boolean basePriceDisplayed() {
+        System.out.println("Checking that base price displayed");
+        DriverProvider.waitFor(3);
+        return driver.findElement(BasePrice).isDisplayed();
     }
 
 }

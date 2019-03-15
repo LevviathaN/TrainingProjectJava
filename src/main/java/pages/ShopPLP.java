@@ -12,7 +12,7 @@ public class ShopPLP {
 
     public By AdjustableBedButton = By.xpath("//*[@id=\"maincontent\"]/div[5]/div/div[1]/div/section/ul[2]/li[5]/a/p");
     public By PlushPillowButton = By.xpath("//*[@id=\"maincontent\"]/div[5]/div/div[1]/div/section/ul[1]/li[4]/a/div/img");
-
+    public By HybridMattressButton = By.xpath("//*[@id=\"maincontent\"]/div[5]/div/div[1]/div/section/ul[1]/li[1]/a/div/img");
 
 
     //Class attributes
@@ -27,6 +27,12 @@ public class ShopPLP {
         System.out.println("Click on Plush Pillow button");
         DriverProvider.waitFor(3);
         driver.findElement(PlushPillowButton).click();
+    }
+
+    public void clickHybridMattressButton () {
+        System.out.println("Click on Plush Pillow button");
+        DriverProvider.waitFor(3);
+        driver.findElement(HybridMattressButton).click();
     }
 
 

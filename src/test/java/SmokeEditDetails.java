@@ -1,4 +1,5 @@
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
 import pages.AdjustableBedPDP;
 import pages.HomePage;
 import pages.ShopPLP;
@@ -6,8 +7,8 @@ import pages.ShoppingCartPage;
 import utils.DriverProvider;
 
 public class SmokeEditDetails {
-
-    public static void main(String[] args) {
+    @Test
+    public static void smokeEditDetails() {
 
         //Class attributes
         WebDriver driver = DriverProvider.driver;

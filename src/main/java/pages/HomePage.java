@@ -29,4 +29,10 @@ public class HomePage {
         DriverProvider.waitFor(5);
         driver.findElement(ShopButton).click();
     }
+
+    public boolean learnMoreButtonAvailable() {
+        System.out.println("checking if Learn More button available");
+        DriverProvider.waitFor(3);
+        return driver.findElement(learnMoreButton).isDisplayed();
+    }
 }

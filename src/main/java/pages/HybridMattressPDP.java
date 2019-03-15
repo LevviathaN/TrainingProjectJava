@@ -9,6 +9,7 @@ public class HybridMattressPDP {
     public WebDriver driver = DriverProvider.driver;
     public By addToCartButton = By.xpath("//button[@id='product-addtocart-button']");
     public By viewCartButton = By.xpath("//a[@class='__to-checkout button']");
+    public By FullSizeButton = By.xpath("//*[@id=\"option-label-bed_size-177-item-15\"]");
 
 
     //Class methods
@@ -25,4 +26,18 @@ public class HybridMattressPDP {
         DriverProvider.waitFor(3);
         driver.findElement(viewCartButton).click();
     }
+
+    public boolean addToCartButtonDisplayed() {
+        System.out.println("checking if button available");
+        DriverProvider.waitFor(3);
+        return driver.findElement(addToCartButton).isDisplayed();
+    }
+
+
+    public void selectFullSizeButton() {
+        System.out.println("Trying to click on View Cart");
+        DriverProvider.waitFor(3);
+        driver.findElement(FullSizeButton).click();
+    }
+
 }
