@@ -34,6 +34,7 @@ public class Test1 {
         checkout.ClosingBillingAddress();
         checkout.ChoosingCreditCard();
         checkout.AddingCouponCode();
+        checkout.ClickOnPlaceOrder();
         System.out.println("Test Passed successfully");
         //driver.close();
 

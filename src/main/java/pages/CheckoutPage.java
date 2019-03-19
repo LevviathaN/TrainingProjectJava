@@ -19,9 +19,10 @@ public class CheckoutPage {
     public By ExpirationMonth = By.name("expiration-month");
     public By ExpirationYear = By.name("expiration-year");
     public By CVVCode = By.name("cvv");
-    public By PlaceOrderButton = By.xpath("//*[@id=\"checkout\"]/div[5]/div[2]/div/div[1]/button/span");
     public By CouponCOdeField = By.id("discount-code");
     public By ApplyButton = By.xpath("//*[@id=\"discount-form\"]/div[2]/div/button");
+    public By PlaceOrderButton = By.xpath("//*[@id=\"checkout\"]/div[5]/div[2]/div/div[1]/button/span");
+    public By PlaceOrderBlock = By.xpath("//*[@id=\"checkout\"]/div[5]/div[2]/div/div[3]");
 
 
 
@@ -109,9 +110,19 @@ public class CheckoutPage {
 
         System.out.println("Adding coupon");
         DriverProvider.waitFor(1);
-        //driver.findElement(By.xpath("//*[@id=\"checkout\"]/div[5]/div[2]"));
         driver.findElement(CouponCOdeField).sendKeys("TMR150");
         driver.findElement(ApplyButton).click();
+
+    }
+
+    public void ClickOnPlaceOrder() {
+
+
+        System.out.println("Clicking place order button");
+        DriverProvider.waitFor(2);
+        driver.findElement(PlaceOrderBlock);
+        DriverProvider.waitFor(3);
+        driver.findElement(PlaceOrderButton).click();
 
     }
 
