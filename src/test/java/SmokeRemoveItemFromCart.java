@@ -9,7 +9,7 @@ import utils.DriverProvider;
 public class SmokeRemoveItemFromCart {
 
     @Test
-    public static void smokeRemoveItemFromCart() {
+    public void smokeRemoveItemFromCart() {
 
         //Class Attributes
         WebDriver driver = DriverProvider.driver;
@@ -24,6 +24,7 @@ public class SmokeRemoveItemFromCart {
         shoppage.clickAdjustableBedButton();
         adjBed.clickAddToCart();
         shoppingcart.clickOnRemoveButton();
+        System.out.println("Test Passed successfully");
         driver.close();
 
 

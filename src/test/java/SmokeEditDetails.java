@@ -8,7 +8,7 @@ import utils.DriverProvider;
 
 public class SmokeEditDetails {
     @Test
-    public static void smokeEditDetails() {
+    public void smokeEditDetails() {
 
         //Class attributes
         WebDriver driver = DriverProvider.driver;
@@ -25,6 +25,7 @@ public class SmokeEditDetails {
         shoppingcart.clickOnEditButton();
         adjBed.clicOnTwinXLSizeButton();
         adjBed.clicOnUpdateCartButton();
+        System.out.println("Test Passed successfully");
         driver.close();
     }
 }

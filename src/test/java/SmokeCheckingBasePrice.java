@@ -23,6 +23,7 @@ public class SmokeCheckingBasePrice {
         shoppage.clickPlushPillowButton();
         pluspillowpage.basePriceDisplayed();
         Assert.assertTrue(pluspillowpage.basePriceDisplayed(), "Base price not displayed");
+        System.out.println("Test Passed successfully");
         driver.close();
 
 

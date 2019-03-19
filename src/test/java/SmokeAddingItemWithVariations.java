@@ -9,7 +9,7 @@ import utils.DriverProvider;
 public class SmokeAddingItemWithVariations {
 
     @Test
-    public static void smokeAddingItemWithVariations() {
+    public void smokeAddingItemWithVariations() {
 
         //Verifying ability of user to add items with variations to cart
 
@@ -27,6 +27,7 @@ public class SmokeAddingItemWithVariations {
         adjBed.SelectSplitKingSize();
         Assert.assertTrue(adjBed.addToCartButtonDisplayed(),"Add to cart button not displayed");
         adjBed.clickAddToCart();
+        System.out.println("Test Passed successfully");
         driver.close();
 
         }

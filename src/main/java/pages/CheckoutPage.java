@@ -19,6 +19,9 @@ public class CheckoutPage {
     public By ExpirationMonth = By.name("expiration-month");
     public By ExpirationYear = By.name("expiration-year");
     public By CVVCode = By.name("cvv");
+    public By PlaceOrderButton = By.xpath("//*[@id=\"checkout\"]/div[5]/div[2]/div/div[1]/button/span");
+    public By CouponCOdeField = By.id("discount-code");
+    public By ApplyButton = By.xpath("//*[@id=\"discount-form\"]/div[2]/div/button");
 
 
 
@@ -69,22 +72,46 @@ public class CheckoutPage {
          DriverProvider.waitFor(1);
          driver.findElement(BillingAddressButton).click();
 
+    }
+
+    // Choosing credit card payment method
+    public void ChoosingCreditCard() {
+
+        //Switching to credit card field and adding required data
+        System.out.println("Adding payment data");
+        driver.switchTo().frame(driver.findElement(By.xpath("//*[@id=\"braintree-hosted-field-number\"]")));
+        driver.findElement(CardNumber).sendKeys("4111111111111111");
+        System.out.println("Credit card number added");
+
+        //Switching to expiration month field and adding required data
+        driver.switchTo().defaultContent();
+        driver.switchTo().frame(driver.findElement(By.xpath("//*[@id=\"braintree-hosted-field-expirationMonth\"]")));
+        driver.findElement(ExpirationMonth).sendKeys("12");
+        System.out.println("Expiration month added");
+
+        //Switching to expiration year field and adding required data
+        driver.switchTo().defaultContent();
+        driver.switchTo().frame(driver.findElement(By.xpath("//*[@id=\"braintree-hosted-field-expirationYear\"]")));
+        driver.findElement(ExpirationYear).sendKeys("22");
+        System.out.println("Expiration year added");
+
+        //Switching to CVV code field and adding required data
+        driver.switchTo().defaultContent();
+        driver.switchTo().frame(driver.findElement(By.xpath("//*[@id=\"braintree-hosted-field-cvv\"]")));
+        driver.findElement(CVVCode).sendKeys("123");
+        System.out.println("CVV code added");
+        driver.switchTo().defaultContent();
 
     }
 
-        public void ChoosingPaymentMethod() {
+    public void AddingCouponCode() {
 
-            // Choosing payment method
 
-        System.out.println("Choosing payment method");
+        System.out.println("Adding coupon");
         DriverProvider.waitFor(1);
-        //driver.switchTo().frame((WebElement) By.className("payment-method-content"));
-        driver.findElement(CardNumber).sendKeys("4111111111111111");
-        driver.findElement(ExpirationMonth).sendKeys("12");
-        driver.findElement(ExpirationYear).sendKeys("22");
-        driver.findElement(CVVCode).sendKeys("123");
-
-
+        //driver.findElement(By.xpath("//*[@id=\"checkout\"]/div[5]/div[2]"));
+        driver.findElement(CouponCOdeField).sendKeys("TMR150");
+        driver.findElement(ApplyButton).click();
 
     }
 

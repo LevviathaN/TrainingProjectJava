@@ -11,7 +11,7 @@ import utils.DriverProvider;
 public class SmokeAddingItemWithoutVariations {
 
     @Test
-    public static void smokeAddingItemWithoutVariations() {
+    public void smokeAddingItemWithoutVariations() {
 
         //Class attributes
 
@@ -28,6 +28,7 @@ public class SmokeAddingItemWithoutVariations {
         shoppage.clickPlushPillowButton();
         Assert.assertTrue(pluspillowpage.addToCartButtonDisplayed(),"Add to cart button not displayed");
         pluspillowpage.clickAddToCart();
+        System.out.println("Test Passed successfully");
         driver.close();
 
 

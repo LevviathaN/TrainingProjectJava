@@ -32,8 +32,10 @@ public class Test1 {
         shoppingcart.clickProceedToCheckout();
         checkout.EnterShippingAddress();
         checkout.ClosingBillingAddress();
-        //checkout.ChoosingPaymentMethod(); (Must be refactored during frame switch)
-        driver.close();
+        checkout.ChoosingCreditCard();
+        checkout.AddingCouponCode();
+        System.out.println("Test Passed successfully");
+        //driver.close();
 
 
 

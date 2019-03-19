@@ -9,7 +9,7 @@ import utils.DriverProvider;
 public class SmokeChangingNumberOfItems {
 
     @Test
-    public static void smokeChangingNumberOfItems() {
+    public void smokeChangingNumberOfItems() {
 
 
         //Class Attributes
@@ -29,6 +29,7 @@ public class SmokeChangingNumberOfItems {
         shoppingcart.clickOnPlusButton();
         shoppingcart.clickOnMinusButton();
         DriverProvider.waitFor(3);
+        System.out.println("Test Passed successfully");
         driver.close();
 
 

@@ -8,6 +8,7 @@ public class HybridMattressPDP {
     //Class attributes
     public WebDriver driver = DriverProvider.driver;
     public By addToCartButton = By.xpath("//button[@id='product-addtocart-button']");
+    public By AddCrossSellItemButton = By.xpath("//*[@id=\"modal-content-38\"]/div/div/div/div[3]/div[1]/div[3]/form/button/span");
     public By viewCartButton = By.xpath("//a[@class='__to-checkout button']");
     public By FullSizeButton = By.xpath("//*[@id=\"option-label-bed_size-177-item-15\"]");
 
@@ -35,9 +36,15 @@ public class HybridMattressPDP {
 
 
     public void selectFullSizeButton() {
-        System.out.println("Trying to click on View Cart");
+        System.out.println("Selecting full size");
         DriverProvider.waitFor(3);
         driver.findElement(FullSizeButton).click();
+    }
+
+    public void clickAddCrossSellItemButton() {
+        System.out.println("Selecting full size");
+        DriverProvider.waitFor(3);
+        driver.findElement(AddCrossSellItemButton).click();
     }
 
 }
